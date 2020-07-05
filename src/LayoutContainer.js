@@ -17,7 +17,7 @@ class LayoutContainer extends Component{
                 enable:true,
                 panel:{
                     enable: true,
-                    background:'grey'
+                    background:'#ccc'
                 },
                 guideline:{
                     show: true

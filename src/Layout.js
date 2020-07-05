@@ -1,5 +1,6 @@
 import React from "react";
 import Panel from "popo-react-panel";
+import {Button} from "antd";
 function Layout() {
     const style1 = {
         width: '100%',
@@ -9,7 +10,15 @@ function Layout() {
     }
     return (
         <div id='container' style={style1}>
-            <Panel target="1"><div>455</div></Panel>
+            <Panel target="1">
+                <div className="flex-container-row">
+                    <Button type="default" className="flex-item-2">Load Image</Button>
+                    <Button type="default" className="flex-item-2">Color Picker</Button>
+                </div>
+            </Panel>
+            <Panel target="2">
+                <img className="item-fill" src="test3.png"/>
+            </Panel>
         </div>
     );
 }
