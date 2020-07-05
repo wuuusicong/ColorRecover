@@ -1,7 +1,7 @@
 import React from "react";
 import Panel from "popo-react-panel";
 import {Button} from "antd";
-function Layout() {
+function Layout({imgSrc}) {
     const style1 = {
         width: '100%',
         height: '100%',
@@ -17,7 +17,7 @@ function Layout() {
                 </div>
             </Panel>
             <Panel target="2">
-                <img className="item-fill" src="test3.png"/>
+                <img className="item-fill" src={imgSrc}/>
             </Panel>
         </div>
     );

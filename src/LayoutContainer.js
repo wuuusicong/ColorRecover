@@ -4,6 +4,9 @@ import *as P from "popojs"
 class LayoutContainer extends Component{
     constructor(props) {
         super(props);
+        this.state = {
+         imgSrc:"test3.png"
+        }
     }
     componentDidMount() {
         const layout = P.init({
@@ -29,11 +32,14 @@ class LayoutContainer extends Component{
                     {panels: [1]}
                 ]
             },
-        })
+        });
+        window.onOpenCvReady = ()=>{
+            console.log("CV来了");
+        }
     }
     render() {
         const style = {width:'100%',height:'100%'}
-        return <Layout/>
+        return <Layout imgSrc={this.state.imgSrc}/>
     }
 }
 export default LayoutContainer
