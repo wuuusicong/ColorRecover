@@ -8,10 +8,10 @@ class LayoutContainer extends Component{
     componentDidMount() {
         const layout = P.init({
             container:'container',
-            rows:12,
+            rows:24,
             cols:24,
             layout: [
-                [12,[[8,[2,5,5]],[16]]]
+                [24,[[8,[2,11,11]],[16]]]
             ],
             dev:{
                 enable:true,
@@ -22,7 +22,13 @@ class LayoutContainer extends Component{
                 guideline:{
                     show: true
                 }
-            }
+            },
+            panel: {
+                enable: true,
+                custom: [
+                    {panels: [1]}
+                ]
+            },
         })
     }
     render() {

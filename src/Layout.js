@@ -1,4 +1,5 @@
 import React from "react";
+import Panel from "popo-react-panel";
 function Layout() {
     const style1 = {
         width: '100%',
@@ -8,6 +9,7 @@ function Layout() {
     }
     return (
         <div id='container' style={style1}>
+            <Panel target="1"><div>455</div></Panel>
         </div>
     );
 }
