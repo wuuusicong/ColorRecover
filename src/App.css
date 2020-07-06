@@ -37,3 +37,9 @@
     transform: rotate(360deg);
   }
 }
+.ant-upload.ant-upload-select  {
+  display: block;
+}
+.ant-upload-list {
+  display: none;
+}

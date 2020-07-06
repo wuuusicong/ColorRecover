@@ -1,7 +1,7 @@
 import React from "react";
 import Panel from "popo-react-panel";
-import {Button} from "antd";
-function Layout({imgSrc}) {
+import {Button,Upload,message} from "antd";
+function Layout({imgSrc,UpProps}) {
     const style1 = {
         width: '100%',
         height: '100%',
@@ -12,12 +12,21 @@ function Layout({imgSrc}) {
         <div id='container' style={style1}>
             <Panel target="1">
                 <div className="flex-container-row">
-                    <Button type="default" className="flex-item-2">Load Image</Button>
+                    <Upload className="flex-item-2" {...UpProps}>
+                        <Button  type="default" className="item-fill">
+                            Image Load
+                        </Button>
+                    </Upload>
                     <Button type="default" className="flex-item-2">Color Picker</Button>
                 </div>
             </Panel>
             <Panel target="2">
                 <img className="item-fill" src={imgSrc}/>
+            </Panel>
+            <Panel target="4">
+                <div id="3Dmain" className="item-fill">
+
+                </div>
             </Panel>
         </div>
     );
